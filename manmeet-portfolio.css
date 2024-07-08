@@ -2,7 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif; /* Use Google Fonts or include locally */
     margin: 0;
     padding: 0;
-    background-image: url('./bg-image/d811eb_7dd1ed288177427991760fb4f6dc44d9~mv2.webp');
+    background-image: url('d811eb_7dd1ed288177427991760fb4f6dc44d9~mv2.webp');
     background-color: #f9f9f9;
     background-position: center;
     background-attachment: fixed; /* Optional: Fixed background */
