@@ -5,20 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="manmeet-portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Manmeet S UI/UX Designer</title>
+    <title>Manmeet S | UI/UX Designer</title>
 </head>
 <body>
     <div class="overlay">
         <div class="main-section">
-            <div class="top-menu">
+            <div class="top-menu" id="top-menu">
                 <div class="web-logo">
                     <span class="logo-heading"><a href="index.html" class="logo-heading-main">ms <span class="logo-ending">.</span></a></span>
                 </div>
-                <div class="menu-links">
-                    <!-- <a href="manmeet-portfolio.html">HOME</a> -->
+                <div class="menu-links" id="menu-links">
                     <a href="resume.html">RESUME</a>
-                    <a href="">UX DESIGN</a>
+                    <a href="uxdesign.html">UX DESIGN</a>
                     <a href="connect.html">CONNECT</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="overlay-mobile" id="overlay-mobile">
+                    <div class="close-icon" id="close-icon">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="resume.html">RESUME</a>
+                        <a href="uxdesign.html">UX DESIGN</a>
+                        <a href="connect.html">CONNECT</a>
+                    </div>
                 </div>
             </div>
             <section id="ux-design" class="ux-design-section">
@@ -43,7 +55,7 @@
                         <div class="card-ux-text">
                             At Baazi Games, I redesigned the CardBaazi app home screen, enhancing game display and user engagement with personalized, intuitive features. Dive in to explore the detailed case studies and insights from my work!
                         </div>
-                        <a href="cbhomescreenredesign.html" class="card-ux-button" target="_blank">View More</a>
+                        <a href="cbhomescreenredesign.html" class="card-ux-button">View More</a>
                     </div>
                     
                     <div class="card-ux card-small">
@@ -52,7 +64,7 @@
                         <div class="card-ux-text">
                             Introduced milestone journeys in CardBaazi to boost engagement and retention, encouraging users to complete tasks and earn rewards.
                         </div>
-                        <a href="cbmilestone.html" class="card-ux-button" target="_blank">View More</a>
+                        <a href="cbmilestone.html" class="card-ux-button">View More</a>
                     </div>
                     <div class="card-ux">
                         <img src="shutterdown-card-thumbnail-1.png" alt="Thumbnail">
@@ -60,7 +72,7 @@
                         <div class="card-ux-text">
                             Developed a unified calendar management system for a photography company, automating tasks, scheduling events, and resolving workflow inefficiencies.
                         </div>
-                        <a href="shutterdownphoto.html" class="card-ux-button" target="_blank">View More</a>
+                        <a href="shutterdownphoto.html" class="card-ux-button">View More</a>
                     </div>
                 </div>
                 <div class="ux-card-row2">
@@ -70,7 +82,7 @@
                         <div class="card-ux-text">
                             Enhanced CardBaazi's add cash journey, allowing wallet top-ups from the game lobby for a seamless, uninterrupted, and user-friendly experience.
                         </div>
-                        <a href="cbcashjourney.html" class="card-ux-button" target="_blank">View More</a>
+                        <a href="cbcashjourney.html" class="card-ux-button">View More</a>
                     </div> 
                 </div>
             </section>
@@ -123,5 +135,41 @@
             </section>
         </div>
     </div>
+    <div id="scroll-to-top" class="scroll-to-top">
+        <i class="fa-solid fa-angle-up" style="color: #ffffff;margin-top: 13px;margin-left: 16px;"></i>
+    </div>
+    <script>
+
+    // Smooth scroll to top on scroll-to-top button click
+    document.getElementById('scroll-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', function() {
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        if (window.scrollY > 300) { // Show the button after scrolling 300px
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+
+
+
+            document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('overlay-mobile').style.display = 'block';
+        document.getElementById('hamburger').style.display = 'none';
+        document.getElementById('close-icon').style.display = 'block'; // Show close icon
+        document.getElementById('menu-links').style.display = 'flex';
+    });
+
+    document.getElementById('close-icon').addEventListener('click', function() {
+        document.getElementById('overlay-mobile').style.display = 'none';
+        document.getElementById('hamburger').style.display = 'block';
+        document.getElementById('close-icon').style.display = 'none'; // Hide close icon
+        document.getElementById('menu-links').style.display = 'none';
+    });
+    </script>
 </body>
 </html>
