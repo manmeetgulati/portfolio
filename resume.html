@@ -5,20 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="manmeet-portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Manmeet S UI/UX Designer</title>
+    <title>Manmeet S | UI/UX Designer</title>
 </head>
 <body>
     <div class="overlay">
         <div class="main-section">
-            <div class="top-menu">
+            <div class="top-menu" id="top-menu">
                 <div class="web-logo">
                     <span class="logo-heading"><a href="index.html" class="logo-heading-main">ms <span class="logo-ending">.</span></a></span>
                 </div>
-                <div class="menu-links">
-                    <!-- <a href="manmeet-portfolio.html">HOME</a> -->
+                <div class="menu-links" id="menu-links">
                     <a href="resume.html">RESUME</a>
                     <a href="uxdesign.html">UX DESIGN</a>
                     <a href="connect.html">CONNECT</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="overlay-mobile" id="overlay-mobile">
+                    <div class="close-icon" id="close-icon">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="overlay-content">
+                        <a href="resume.html">RESUME</a>
+                        <a href="uxdesign.html">UX DESIGN</a>
+                        <a href="connect.html">CONNECT</a>
+                    </div>
                 </div>
             </div>
 
@@ -46,12 +58,12 @@
                             <div class="cv-btn">
                                 <a href="" class="download-cv-btn">Download CV</a>
                             </div>
-                            <div class="cv-btn">
-                                <a href="" class="linkedin-page-btn">Linkedin Page</a>
+                            <div id="linkedin-btn" class="cv-btn">
+                                <a href="https://www.linkedin.com/in/manmeet-singh-gulati/" class="linkedin-page-btn" target="_blank">Linkedin Page</a>
                             </div>
                         </div>
                     </div>
-                    <div class="social-handles">
+                    <div id="social-handles" class="social-handles">
                         <a href="https://www.behance.net/manmeetsingh19" class="icon linkedin" target="_blank">
                             <img src="behance-icon-5.png" height="36px">
                         </a>
@@ -163,7 +175,7 @@
             </section>
             
             <section id="work-experience" class="section">
-                <div class="container">
+                <div class="container-resume">
                     <h2 class="section-title">Work Experience</h2>
                     <div class="timeline">
                         <div class="timeline-item">
@@ -216,7 +228,7 @@
                 </div>
             </section>
             <section id="section" class="section">
-                <div class="container">
+                <div class="container-resume">
                     <h2 class="section-title">Education & Certificates</h2>
                     <div class="timeline">
                         <div class="timeline-item">
@@ -335,6 +347,20 @@
         } else {
             scrollToTopButton.style.display = 'none';
         }
+    });
+
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('overlay-mobile').style.display = 'block';
+        document.getElementById('hamburger').style.display = 'none';
+        document.getElementById('close-icon').style.display = 'block'; // Show close icon
+        document.getElementById('menu-links').style.display = 'flex';
+    });
+
+    document.getElementById('close-icon').addEventListener('click', function() {
+        document.getElementById('overlay-mobile').style.display = 'none';
+        document.getElementById('hamburger').style.display = 'block';
+        document.getElementById('close-icon').style.display = 'none'; // Hide close icon
+        document.getElementById('menu-links').style.display = 'none';
     });
     </script>
 </body>
