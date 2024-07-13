@@ -184,12 +184,23 @@ body {
     align-items: center;
     padding-top: 70px; /* Ensure content is below the fixed menu */
 }
+.main-section-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px; /* Ensure content is below the fixed menu */
+    @media screen and (max-width: 768px) {
+        align-items: flex-start;
+        margin-left: 0;
+        width: 100%;
+    }
+}
 .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 12%; /* Adjust spacing as needed */
+    /* margin-top: 12%; */
 }
 .card {
     display: flex;
@@ -356,9 +367,9 @@ h2 {
     fill: #25D366;
 }
 .intro-card{
-    margin-top: 6%;
+    padding-top: 16%;
     @media screen and (max-width: 768px) {
-        margin-top: 30%;
+        padding-top: 30%;
     }
 }
 .border-spacer{
@@ -526,8 +537,6 @@ h2 {
 
 .overlay {
     position: relative;
-    width: 100%;
-    height: 100%;
     background-color: rgba(255, 255, 255, 0.43); /* White color with 70% opacity */
 
 }
@@ -799,8 +808,9 @@ h2 {
 .top-section{
     margin-top: 6%;
     @media (max-width: 768px) {
-        margin-right: 24px;
-        margin-left: 24px;
+        width: 100%;
+        /* margin-right: 24px;
+        margin-left: 24px; */
     }
 }
 .intro-section{
@@ -811,7 +821,7 @@ h2 {
     padding-bottom: 54px;
     @media (max-width: 768px) {
         flex-direction: column;
-        width: 100%;
+        max-width: 100%;
         align-items: center;
         margin-right: 0;
     }
@@ -832,11 +842,14 @@ h2 {
     font-family: raleway, sans-serif;
     font-weight: 700;
     @media (max-width: 768px) {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 .heading-2-main{
     margin-top: 24px;
+    @media (max-width: 768px) {
+        margin-top: 12px;
+    }
 }
 
 .heading-3{
@@ -845,11 +858,19 @@ h2 {
     font-weight: inherit;
     color: #373737;
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 .heading-3-main{
     margin-top: 10px;
+    @media (max-width: 768px) {
+        margin-top: 12px;
+    }
+}
+.intro-section-bg{
+    @media (max-width: 768px) {
+        width: 286px;
+    }
 }
 .about-div{
     display: flex;
@@ -860,7 +881,7 @@ h2 {
     @media (max-width: 768px) {
         margin-top: 24px;
         margin-left: 0px;
-        margin-right: 32px;
+        margin-right: 0;
     }
 }
 .intro-btn{
@@ -889,12 +910,16 @@ h2 {
     letter-spacing: 1px;
     @media screen and (max-width: 768px) {
         font-size: 16px;
-        padding: 14px 90px;
+        padding: 14px 86px;
     }
 }
 .download-cv-btn:hover{
     background-color: #5DB94A;
     color: #fff;
+    @media screen and (max-width: 768px) {
+        background-color: #373737;
+        color: #fff;
+    }
 }
 .linkedin-page-btn{
     background-color: transparent;
