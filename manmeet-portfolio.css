@@ -4,18 +4,43 @@
 *::after {
     box-sizing: border-box;
 }
-
-body {
+html, body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
     background-image: url('d811eb_7dd1ed288177427991760fb4f6dc44d9~mv2.webp');
     background-color: #f9f9f9;
     background-position: center;
-    background-size: cover; /* Ensure the background image covers the viewport */
+    background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat; /* Ensure the background image does not repeat */
+    background-repeat: no-repeat;
+    --fill-layer-image-opacity: 0.43;
+    --fill-layer-background-media-position: absolute;
+    --fill-layer-background-media-pointer-events: none;
+    --bg-overlay-color: white;
+    --bg-gradient: none;
+    --column-width: 980px;
+    --column-flex: 980;
+}
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+/* body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    background-image: url('d811eb_7dd1ed288177427991760fb4f6dc44d9~mv2.webp');
+    background-color: #f9f9f9;
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
     --fill-layer-image-opacity: 0.43;
     --fill-layer-background-media-position: absolute;
     --fill-layer-background-media-pointer-events: none;
@@ -24,31 +49,27 @@ body {
     width: 100%;
     --column-width: 980px;
     --column-flex: 980;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
     height: 100vh;
-}
+} */
 
-@media (max-width: 768px) {
-
-    /* Adjust column width for smaller screens */
+/* @media (max-width: 768px) {
     :root {
         --column-width: 100%;
         --column-flex: 1;
     }
-}
+} */
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     body {
-        background-size: cover; /* Further adjustments for very small screens */
-        background-attachment: scroll; /* Change to scroll for better mobile performance */
+        background-size: cover; 
+        background-attachment: scroll; 
     }
-
-    /* Additional adjustments for very small screens */
     :root {
         --column-width: 100%;
         --column-flex: 1;
     }
-}
+} */
 .top-menu {
     background-color: #fff;
     display: flex;
@@ -521,7 +542,10 @@ h2 {
         max-width: 300px;
     }
 }
-
+.picture-center{
+    display: flex;
+    justify-content: center;
+}
 .green-background .card-content {
     background: rgba(0, 0, 0, 0.6); /* Adjust if needed */
 }
@@ -945,7 +969,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 20px;
+    justify-content: center;
     margin-left: 360px;
 }
 .about-myself{
@@ -1104,6 +1128,17 @@ h2 {
     flex-direction: row;
     gap: 16px;
     margin-left: 84px;
+    @media screen and (max-width: 768px) {
+        padding-left: 24px;
+        margin-left: 0;
+        padding-top: 24px;
+    }
+}
+.tool-desc-6{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-left: 50px;
     @media screen and (max-width: 768px) {
         padding-left: 24px;
         margin-left: 0;
