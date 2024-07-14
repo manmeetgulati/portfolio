@@ -80,7 +80,7 @@
                 </div>                
             </section>
         
-            <section id="explore-main-section" class="explore-main-section">
+            <!-- <section id="explore-main-section" class="explore-main-section">
                 <div class="cards-section">
                     <a href="resume.html">
                         <div class="cards-section-desc">
@@ -125,7 +125,62 @@
                 <div id="down-arrow" class="down-arrow">
                     <i class="fa-solid fa-angle-down"></i>
                 </div>
+            </section> -->
+
+            <section id="explore-main-section" class="explore-main-section">
+                <div class="cards-section">
+                    <a href="resume.html">
+                        <div class="cards-section-desc">
+                            <div class="img-card">
+                                <div class="picture-center">
+                                    <picture>
+                                        <source media="(max-width: 480px)" srcset="about-me-mobile.webp">
+                                        <source media="(max-width: 768px)" srcset="about-me-mobile.webp">
+                                        <img src="about-me.webp" alt="Design Image">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="card-content-desc">
+                                <h3><a href="resume.html" class="about-me-link">About Me</a></h3>
+                            </div>
+                        </div>    
+                    </a>
+                    <a href="uxdesign.html" class="ux-card-2">
+                        <div class="cards-section-desc green-background">
+                            <div class="img-card">
+                                <img src="best-work.webp">
+                            </div>
+                            <div class="card-content-desc">
+                                <h3 class="txt-white">Best Work</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <div id="ui-design-card" class="card-mobile-bg cards-section-desc">
+                        <div class="img-card">
+                            <picture>
+                                <source media="(max-width: 480px)" srcset="ui-design-mobile.webp">
+                                <source media="(max-width: 768px)" srcset="ui-design-mobile.webp">
+                                <img src="ui-design.webp" alt="Design Image">
+                            </picture>
+                        </div>
+                        <div class="card-content-desc">
+                            <h3>UI Design</h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="down-arrow" class="down-arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
             </section>
+            
+            <!-- Modal Structure -->
+            <div id="ui-design-modal" class="modal">
+                <div class="modal-content">
+                    <h2 class="popup-heading">UI Designs loading Soon!</h2>
+                    <p>Exciting new designs are on the way. Stay tuned for a sneak peek of our work!</p>
+                    <button id="close-modal" class="close-modal">Go Back to Homepage</button>
+                </div>
+            </div>
 
             <section id="my-highlights" class="my-highlights">
                 <div class="highlight-bg">
@@ -214,6 +269,50 @@
         <i class="fa-solid fa-angle-up" style="color: #ffffff;margin-top: 13px;margin-left: 16px;"></i>
     </div>
     <script>
+
+// Get the modal
+var modal = document.getElementById("ui-design-modal");
+
+// Get the card that opens the modal
+var card = document.getElementById("ui-design-card");
+
+// Get the <button> element that closes the modal
+var closeModal = document.getElementById("close-modal");
+
+// Function to show the modal
+function showModal() {
+    modal.style.display = "flex";
+    modal.style.alignItems = "center";
+    modal.style.justifyContent = "center";
+}
+
+// Function to hide the modal
+function hideModal() {
+    modal.style.display = "none";
+}
+
+// When the user clicks on the card, open the modal
+card.onclick = function() {
+    showModal();
+}
+
+// When the user clicks on <button> (close-modal), close the modal
+closeModal.onclick = function() {
+    hideModal();
+    window.location.href = "index.html"; // Redirect to homepage
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        hideModal();
+    }
+}
+
+
+
+
+
         document.getElementById('explore-button').addEventListener('click', function() {
         setTimeout(function() {
             document.getElementById('explore-main-section').scrollIntoView({ behavior: 'smooth' });
