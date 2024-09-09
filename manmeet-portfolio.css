@@ -1504,10 +1504,12 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 60px;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-top: 60px;
     @media (max-width: 768px) {
         margin-top: 60px;
         flex-direction: column;
+        gap: 0;
     }
 }
 .card-small {
@@ -1728,6 +1730,31 @@ h2 {
         width: 386px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
