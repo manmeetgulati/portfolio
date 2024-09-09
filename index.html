@@ -178,13 +178,13 @@
             </section>
             
             <!-- Modal Structure -->
-            <!-- <div id="ui-design-modal" class="modal">
+            <div id="ui-design-modal" class="modal">
                 <div class="modal-content">
                     <h2 class="popup-heading">UI Designs loading Soon!</h2>
                     <p>Exciting new designs are on the way. Stay tuned for a sneak peek of our work!</p>
                     <button id="close-modal" class="close-modal">Go Back to Homepage</button>
                 </div>
-            </div> -->
+            </div>
 
             <section id="my-highlights" class="my-highlights">
                 <div class="highlight-bg">
@@ -274,44 +274,7 @@
     </div>
     <script>
 
-// Get the modal
-var modal = document.getElementById("ui-design-modal");
 
-// Get the card that opens the modal
-var card = document.getElementById("ui-design-card");
-
-// Get the <button> element that closes the modal
-var closeModal = document.getElementById("close-modal");
-
-// Function to show the modal
-function showModal() {
-    modal.style.display = "flex";
-    modal.style.alignItems = "center";
-    modal.style.justifyContent = "center";
-}
-
-// Function to hide the modal
-function hideModal() {
-    modal.style.display = "none";
-}
-
-// When the user clicks on the card, open the modal
-card.onclick = function() {
-    showModal();
-}
-
-// When the user clicks on <button> (close-modal), close the modal
-closeModal.onclick = function() {
-    hideModal();
-    window.location.href = "index.html"; // Redirect to homepage
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        hideModal();
-    }
-}
 
 
 
